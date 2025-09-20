@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/BlogPost.astro';
+
+const acuerdos = [
+    { año: 2025, url: "https://www.gob.pe/institucion/municerroazul/colecciones/59645-decretos-de-alcaldia-2025" },
+    { año: 2024, url: "https://www.gob.pe/institucion/municerroazul/colecciones/35963-decretos-de-alcaldia-2024" },
+    { año: 2023, url: "https://www.gob.pe/institucion/municerroazul/colecciones/16827-decretos-de-alcaldia-2023" },
+    { año: 2022, url: "https://www.gob.pe/institucion/municerroazul/colecciones/4971-decretos-de-alcaldia-2022" },
+    { año: 2021, url: "https://www.gob.pe/institucion/municerroazul/colecciones/3984-decretos-de-alcaldia-2021" },
+    { año: 2020, url: "https://www.gob.pe/institucion/municerroazul/colecciones/3983-decretos-de-alcaldia-2020" },
+    { año: 2019, url: "https://www.gob.pe/institucion/municerroazul/colecciones/3961-decretos-de-alcaldia-2019" },
+    { año: 2018, url: "https://www.gob.pe/institucion/municerroazul/colecciones/7736-decretos-de-alcaldia-2018" }
+];
+---
+
+<Layout title="Decretos de Alcaldía">
+    <section class="municipality-documents flex flex-col items-center justify-center gap-2 my-[8rem] px-[1.2rem] md:w-[900px] xl:w-[1200px] mx-auto">
+        <article class="municipality-documents-title mb-[3rem]">
+            <h2 class="mb-[3rem] text-3xl md:text-4xl lg:text-5xl text-center font-semibold">
+                Decretos de Alcaldía
+            </h2>
+        </article>
+
+        <article class="municipality-documents-information flex flex-col items-center justify-center gap-8 md:grid md:grid-cols-2 md:place-items-center xl:grid-cols-3">
+            {acuerdos.map((acuerdo) => (
+                <a class="border border-[#015da8] px-4 py-2 rounded-[var(--border-radius)] transition-all duration-300 ease-in-out xl:hover:scale-110"
+                   href={acuerdo.url}>
+                    Decretos de Alcaldía - <b>año {acuerdo.año}</b>
+                </a>
+            ))}
+        </article>
+    </section>
+</Layout>

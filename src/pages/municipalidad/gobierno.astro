@@ -1,0 +1,350 @@
+---
+import Layout from "../../layouts/BlogPost.astro";
+---
+
+<Layout title="Gobierno Municipal">
+    <section class="governmentflex flex-col items-center justify-center gap-2 my-[8rem] px-[1.2rem] md:w-[900px] xl:w-[1200px] mx-auto">
+        <article class="government-title mb-[5rem]">
+            <h3 class="[font-family:var(--font-family-modern)] mb-[3rem] text-3xl md:text-4xl lg:text-5xl text-center font-semibold">Gobierno Municipal</h3>
+        </article>
+        <article class="government-information w-full flex flex-col items-center justify-center gap-8 md:grid md:grid-cols-2 md:place-items-center xl:grid-cols-3">
+            
+            <!-- Sr. José Paín García -->
+            <div class="w-full h-[370px] rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 bg-white p-6 text-center">
+                <div class="flex justify-center mb-4">
+                    <img class="rounded-full w-24 h-24 object-cover border-2 [border-color:var(--color-azul-claro)]" src="https://www.municerroazul.gob.pe/muni-resources/img/alcalde-regidores/alcalde.png" alt="jose-pain-garcia" />
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Alcalde</h3>
+                    <p class="text-sm [color:var(--color-azul-claro)] font-medium mt-1">Sr. José Paín García</p>
+                </div>
+
+                <div class="mt-4 text-left text-sm">
+                    <p class="font-semibold text-gray-700 mb-1 flex items-center">📧 Correo Institucional:</p>
+                    <p class="text-gray-600 break-all ml-4 mb-2"><a href="mailto:jose.pain@municerroazul.gob.pe">jose.pain@municerroazul.gob.pe</a></p>
+                </div>
+            </div>
+
+            <!-- Sra. Sandra Yulliet Manco Chumpitaz -->
+            <div class="w-full h-[370px] rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 bg-white p-6 text-center">
+                <div class="flex justify-center mb-4">
+                    <img class="rounded-full w-24 h-24 object-cover border-2 [border-color:var(--color-azul-claro)]" src="https://www.municerroazul.gob.pe/muni-resources/img/alcalde-regidores/reg-manco.png" alt="sandra-manco-chumpitaz" />
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Teniente Alcalde</h3>
+                    <p class="text-sm [color:var(--color-azul-claro)] font-medium mt-1">Sra. Sandra Yulliet Manco Chumpitaz</p>
+                </div>
+
+                <div class="mt-4 text-left text-sm">
+                    <p class="font-semibold text-gray-700 mb-1 flex items-center">📧 Correo Institucional:</p>
+                    <p class="text-gray-600 break-all ml-4 mb-2"><a href="mailto:sandra.manco@municerroazul.gob.pe">sandra.manco@municerroazul.gob.pe</a></p>
+                </div>
+
+                <button data-modal-target="model-1" data-modal-toggle="model-1" class="block text-white bg-[var(--color-azul-claro)] font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer" type="button">
+                    Leer más
+                </button>
+
+                
+                    <div id="model-1" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full text-left">
+                        <div class="relative p-4 w-full max-w-2xl max-h-full">
+                            <div class="relative bg-white rounded-lg shadow-sm">
+                                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                                    <h3 class="text-xl font-semibold text-[#000]">
+                                        Comisiones:
+                                    </h3>
+                                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="model-1">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <div class="p-4 md:p-5 space-y-4">
+                                    <ol class="list-decimal pl-5">
+                                        <li><span class="font-semibold">Presidente:</span>
+                                            <ul class="list-disc pl-5">
+                                                <li>Comisión de desarrollo urbano y rural, infraestructura, gestión de riesgo de desastres, seguridad ciudadana y transporte.</li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="font-semibold">Vicepresidente:</span>
+                                            <ul class="list-disc pl-5">
+                                                <li>Comisión de administración, presupuesto, planificación, finanzas administrativas de tributos y coactiva.</li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="font-semibold">Vicepresidente:</span>
+                                            <ul class="list-disc pl-5">
+                                                <li>Comisión de desarrollo económico, medio ambiente, turismo, fiscalización y sanciones administrativas y servicios públicos.</li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="font-semibold">Vocal:</span>
+                                            <ul class="list-disc pl-5">
+                                                <li>Comisión de asuntos legales, límites, control, procuraduría y transparencia.</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+
+            <!-- Sr. Milton Omar Lara Campos -->
+            <div class="w-full h-[370px] rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 bg-white p-6 text-center">
+                <div class="flex justify-center mb-4">
+                    <img class="rounded-full w-24 h-24 object-cover border-2 [border-color:var(--color-azul-claro)]" src="https://www.municerroazul.gob.pe/muni-resources/img/alcalde-regidores/reg-lara.png" alt="sandra-manco-chumpitaz" />
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Regidor</h3>
+                    <p class="text-sm [color:var(--color-azul-claro)] font-medium mt-1">Sr. Milton Omar Lara Campos</p>
+                </div>
+
+                <div class="mt-4 text-left text-sm">
+                    <p class="font-semibold text-gray-700 mb-1 flex items-center">📧 Correo Institucional:</p>
+                    <p class="text-gray-600 break-all ml-4 mb-2"><a href="mailto:milton.lara@municerroazul.gob.pe">milton.lara@municerroazul.gob.pe</a></p>
+                </div>
+
+                <button data-modal-target="model-2" data-modal-toggle="model-2" class="block text-white bg-[var(--color-azul-claro)] font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer" type="button">
+                    Leer más
+                </button>
+
+                <div id="model-2" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full text-left">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                        <div class="relative bg-white rounded-lg shadow-sm">
+                            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                                <h3 class="text-xl font-semibold text-[#000]">Comisiones:</h3>
+                                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="model-2">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <div class="p-4 md:p-5 space-y-4">
+                                <ol class="list-decimal pl-5">
+                                    <li><span class="font-semibold">Presidente:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de desarrollo social, participación vecinal, programas sociales, educación, cultura, deporte, salud y demuna.</li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="font-semibold">Vocal:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de desarrollo urbano y rural, infraestructura, gestión de riesgo de desastres,seguridad ciudadana y transporte.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sr. Juan Antonio Arias Quispe -->
+            <div class="w-full h-[370px] rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 bg-white p-6 text-center">
+                <div class="flex justify-center mb-4">
+                    <img class="rounded-full w-24 h-24 object-cover border-2 [border-color:var(--color-azul-claro)]" src="https://www.municerroazul.gob.pe/muni-resources/img/alcalde-regidores/reg-arias.png" alt="juan-arias-quispe" />
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Regidor</h3>
+                    <p class="text-sm [color:var(--color-azul-claro)] font-medium mt-1">Sr. Juan Antonio Arias Quispe</p>
+                </div>
+
+                <div class="mt-4 text-left text-sm">
+                    <p class="font-semibold text-gray-700 mb-1 flex items-center">📧 Correo Institucional:</p>
+                    <p class="text-gray-600 break-all ml-4 mb-2"><a href="mailto:juan.arias@municerroazul.gob.pe">juan.arias@municerroazul.gob.pe</a></p>
+                </div>
+
+                <button data-modal-target="model-3" data-modal-toggle="model-3" class="block text-white bg-[var(--color-azul-claro)] font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer" type="button">
+                    Leer más
+                </button>
+
+                <div id="model-3" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full text-left">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                        <div class="relative bg-white rounded-lg shadow-sm">
+                            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                                <h3 class="text-xl font-semibold text-[#000]">Comisiones:</h3>
+                                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="model-3">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <div class="p-4 md:p-5 space-y-4">
+                                <ol class="list-decimal pl-5">
+                                    <li><span class="font-semibold">Presidente:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de administración, presupuesto, planificación, finanzas administrativas de tributos y coactiva.</li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="font-semibold">Vicepresidente:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de desarrollo urbano y rural, infraestructura, gestión de riesgo de desastres, seguridad ciudadana y transporte.</li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="font-semibold">Vicepresidente:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de asuntos legales, límites, control, procuraduría y transparencia.</li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="font-semibold">Vocal:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de desarrollo económico, medio ambiente, turismo, fiscalización y sanciones administrativas y servicios públicos.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Srta. Alicia Elizabeth Pizarro Calagua -->
+            <div class="w-full h-[370px] rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 bg-white p-6 text-center">
+                <div class="flex justify-center mb-4">
+                    <img class="rounded-full w-24 h-24 object-cover border-2 [border-color:var(--color-azul-claro)]" src="https://www.municerroazul.gob.pe/muni-resources/img/alcalde-regidores/reg-pizarro.png" alt="alicia-pizarro-calagua" />
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Regidor</h3>
+                    <p class="text-sm [color:var(--color-azul-claro)] font-medium mt-1">Srta. Alicia Elizabeth Pizarro Calagua</p>
+                </div>
+
+                <div class="mt-4 text-left text-sm">
+                    <p class="font-semibold text-gray-700 mb-1 flex items-center">📧 Correo Institucional:</p>
+                    <p class="text-gray-600 break-all ml-4 mb-2"><a href="mailto:alicia.pizarro@municerroazul.gob.pe">alicia.pizarro@municerroazul.gob.pe</a></p>
+                </div>
+
+                <button data-modal-target="model-4" data-modal-toggle="model-4" class="block text-white bg-[var(--color-azul-claro)] font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer" type="button">
+                    Leer más
+                </button>
+
+                <div id="model-4" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full text-left">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                        <div class="relative bg-white rounded-lg shadow-sm">
+                            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                                <h3 class="text-xl font-semibold text-[#000]">Comisiones:</h3>
+                                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="model-4">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <div class="p-4 md:p-5 space-y-4">
+                                <ol class="list-decimal pl-5">
+                                    <li><span class="font-semibold">Presidente:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de asuntos legales, límites, control, procuraduría y transparencia.</li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="font-semibold">Vocal:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de Administración, Presupuesto, Planificación, Finanzas, Administrativas de Tributos y Coactiva.</li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="font-semibold">Vocal:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de desarrollo social, participación vecinal, programas sociales, educación, cultura, deporte, salud y demuna.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sra. Marlene Rosario Quispe Cama -->
+            <div class="w-full h-[370px] rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 bg-white p-6 text-center">
+                <div class="flex justify-center mb-4">
+                    <img class="rounded-full w-24 h-24 object-cover border-2 [border-color:var(--color-azul-claro)]" src="https://www.municerroazul.gob.pe/muni-resources/img/alcalde-regidores/reg-quispe.png" alt="marlene-quispe-cama" />
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Regidor</h3>
+                    <p class="text-sm [color:var(--color-azul-claro)] font-medium mt-1">Sra. Marlene Rosario Quispe Cama</p>
+                </div>
+
+                <div class="mt-4 text-left text-sm">
+                    <p class="font-semibold text-gray-700 mb-1 flex items-center">📧 Correo Institucional:</p>
+                    <p class="text-gray-600 break-all ml-4 mb-2"><a href="mailto:marlene.quispe@municerroazul.gob.pe">marlene.quispe@municerroazul.gob.pe</a></p>
+                </div>
+
+                <button data-modal-target="model-5" data-modal-toggle="model-5" class="block text-white bg-[var(--color-azul-claro)] font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer" type="button">
+                    Leer más
+                </button>
+
+                <div id="model-5" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full text-left">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                        <div class="relative bg-white rounded-lg shadow-sm">
+                            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                                <h3 class="text-xl font-semibold text-[#000]">Comisiones:</h3>
+                                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="model-5">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <div class="p-4 md:p-5 space-y-4">
+                                <ol class="list-decimal pl-5">
+                                    <li><span class="font-semibold">Presidente:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de desarrollo económico, medio ambiente, turismo, fiscalización y sanciones administrativas y servicios públicos.</li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="font-semibold">Vicepresidente:</span>
+                                        <ul class="list-disc pl-5">
+                                            <li>Comisión de desarrollo social, participación vecinal, programas sociales, educación, cultura, deporte, salud y demuna.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <div id="modal-overlay" class="hidden fixed inset-0 bg-black/70 z-40"></div>
+
+</Layout>
+
+<script>
+    const toggleButtons = document.querySelectorAll('[data-modal-toggle]');
+    const overlay = document.getElementById('modal-overlay');
+
+    function closeAllModals() {
+        const openModals = document.querySelectorAll("[id^='model-']:not(.hidden)");
+        openModals.forEach((modal) => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+    }
+
+    toggleButtons.forEach((btnModal) => {
+        btnModal.addEventListener('click', () => {
+            const modalId = btnModal.getAttribute('data-modal-target');
+            if (!modalId) return;
+            const modal = document.getElementById(modalId);
+            if (!modal || !overlay) return;
+
+            closeAllModals();
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            overlay.classList.remove('hidden');
+        });
+    });
+
+    overlay?.addEventListener('click', () => {
+        closeAllModals();
+        overlay.classList.add('hidden');
+    });
+</script>
+

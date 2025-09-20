@@ -1,0 +1,72 @@
+---
+// Define aquí tus banners. Asegúrate que las imágenes existan en `public/banners/`
+const banners = [
+    { src: "/banners/3.png", alt: "Banner de Amnistía Tributaria" },
+    { src: "/banners/3.png", alt: "Banner de Obras Públicas" },
+    { src: "/banners/3.png", alt: "Banner de Evento Cultural del Distrito" },
+];
+---
+<!-- 
+    LA SOLUCIÓN:
+    1. Se añade la clase `relative` a este contenedor.
+-->
+<section class="swiper-container relative w-full h-[60vh] md:h-[70vh] max-h-[700px]">
+    <div class="swiper-wrapper">
+        {banners.map(banner => (
+            <div class="swiper-slide">
+                <img src={banner.src} alt={banner.alt} class="w-full h-full object-cover" />
+            </div>
+        ))}
+    </div>
+    <div class="swiper-button-next text-white drop-shadow-lg"></div>
+    <div class="swiper-button-prev text-white drop-shadow-lg"></div>
+    <div class="swiper-pagination"></div>
+</section>
+
+<!-- El script corregido que importa Swiper localmente -->
+<script>
+    // 1. Importa Swiper, sus módulos y sus estilos
+    import Swiper from 'swiper';
+    import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+    import 'swiper/css';
+    import 'swiper/css/navigation';
+    import 'swiper/css/pagination';
+
+    // 2. Inicializa Swiper con los módulos que necesitas
+    const swiper = new Swiper('.swiper-container', {
+        // Asocia los módulos importados
+        modules: [Navigation, Pagination, Autoplay],
+
+        // Tus opciones de configuración
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+<style>
+    .swiper-pagination {
+        /* Sube los puntos 20px desde el borde inferior */
+        bottom: 20px !important; 
+    }
+
+    /* Estilo para los puntos inactivos */
+    .swiper-pagination-bullet {
+        background-color: white !important;
+        opacity: 0.7;
+    }
+
+    /* Estilo para el punto activo (el de la imagen actual) */
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+    }
+</style>

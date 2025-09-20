@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/BlogPost.astro";
+import NoticesList from "../../components/notices-list";
+---
+
+<Layout title="Notas de Prensa">
+    <section class="flex flex-col items-center justify-center my-[8rem] md:w-[700px] xl:w-[1200px] mx-auto">
+        <article class="mb-[3rem]">
+            <h2 class="[font-family:var(--font-family-modern)] text-3xl md:text-4xl lg:text-5xl text-center font-semibold">Notas de Prensa</h2>
+        </article>
+        <NoticesList></NoticesList>
+    </section>
+</Layout>

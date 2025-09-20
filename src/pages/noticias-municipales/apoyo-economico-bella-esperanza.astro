@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/BlogPost.astro";
+import NoticesBody from "../../components/content/notices-body";
+
+const noticesBodyContent = [
+    {
+        title: "Apoyo Económico al Club Deportivo Bella Esperanza",
+        image: "https://www.municerroazul.gob.pe/muni-resources/img/notices/june/BellaEsperanzaReunion.jpg",
+        date: "Martes, 10 de junio del 2025",
+        text: "Cañete, Cerro Azul 10 de junio del 2025 - En sesión plenaria, el Concejo Municipal aprobó" +
+        "por unanimidad el otorgamiento de un apoyo económico al Club Deportivo Bella Esperanza, reforzando" +
+        "así el respaldo institucional al desarrollo del deporte local. Este nuevo aporte se suma al apoyo" +
+        "ya brindado para el traslado de los jugadores a sus encuentros deportivos mediante el uso del minibús" +
+        "municipal. Esta iniciativa refleja el firme compromiso de la actual gestión con el fomento y la" +
+        "valorización del deporte como una herramienta fundamental para el bienestar integral, la cohesión" +
+        "social y el desarrollo de nuestra comunidad. 'Seguiremos trabajando incansablemente para respaldar" +
+        "todas aquellas iniciativas que promuevan la salud, la integración y el crecimiento de nuestros" +
+        "jóvenes a través del deporte', señalaron autoridades municipales tras la aprobación. El Concejo" +
+        "Municipal reitera su apoyo a las organizaciones deportivas locales, convencido de que el deporte es" +
+        "un motor clave para formar ciudadanos comprometidos, solidarios y saludables."
+    }
+]
+
+---
+
+<Layout title="Apoyo Económico al Club Deportivo Bella Esperanza">
+    {noticesBodyContent.map((noticesBodyContent) => (
+        <NoticesBody title={noticesBodyContent.title} image={noticesBodyContent.image} date={noticesBodyContent.date} text={noticesBodyContent.text} />
+    ))}
+</Layout>

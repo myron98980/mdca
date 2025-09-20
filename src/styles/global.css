@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import "tailwindcss";
+
+:root {
+	--color-azul-claro: #015da8;
+	--color-azul-oscuro: #00446b;
+	--color-amarillo: #ffcd01;
+	--color-naranja: #c78c62;
+	--color-blanco: #d6d6d6;
+	--color-blanco-alternativo: #faf8ff;
+	--color-celeste: #29abe2;
+	--color-negro: #000;
+	--box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.12);
+	--font-family-base: 'Archivo', sans-serif;
+	--font-family-modern: 'Bricolage Grotesque', sans-serif;
+	--border-radius: 30px;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo/Archivo-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+	font-family: var(--font-family-base);
+	overflow-wrap: break-word;
+	line-height: 1.7;
+	padding-bottom: env(safe-area-inset-bottom);
+}
+
+h1 {
+	font-family: var(--font-family-modern);
+}
+
+/*-------------------------------------
+	START
+-------------------------------------*/
+.start {
+	background-size: cover;
+	background-position: center;
+	width: 100vw;
+	min-height: 100dvh;
+	background-image: url("https://www.municerroazul.gob.pe/muni-resources/img/presentation/portada-cerro-azul.avif");
+	overflow: hidden;
+
+	.start-information {
+		min-height: 60vh;
+		max-width: 90%;
+
+		.button-start {
+			border-radius: var(--border-radius);
+
+			background: rgb(1, 93, 168);
+			background: linear-gradient(90deg, rgba(1, 93, 168, 1) 0%, rgba(1, 123, 138, 1) 49%, rgba(0, 68, 107, 1) 100%);
+			transition: all 0.3s ease-in-out;
+		}
+	}
+}
+
+/*-------------------------------------
+	DECLARATION
+-------------------------------------*/
+.declaration {
+		.declaration-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+			margin: 1rem 0;
+
+			h3 {
+				font-weight: 600;
+			}
+
+			iframe {
+				display: none;
+			}
+		}
+}
+
+/*-------------------------------------
+	PUBLIC HEARING
+-------------------------------------*/
+.public-hearing {
+	.public-hearing-information {
+		.tabs {
+			label {
+				order: 1;
+				display: block;
+				padding: 1rem 2rem;
+				margin-right: 0.2rem;
+				cursor: pointer;
+				color: #000;
+				font-weight: bold;
+				transition: all 0.2s ease-in-out;
+			}
+
+			.tab {
+				order: 99;
+				flex-grow: 1;
+				width: 100%;
+				display: none;
+				padding: 1rem;
+				background: rgb(206, 211, 215);
+				background: linear-gradient(90deg, rgba(206, 211, 215, 0.5158438375350141) 0%, rgba(148, 152, 154, 0.04525560224089631) 100%);
+			}
+
+			input[type="radio"] {
+				display: none;
+			}
+
+			input[type="radio"]:checked+label {
+				background: var(--color-azul-claro);
+				color: #fff;
+			}
+
+			input[type="radio"]:checked+label+.tab {
+				display: block;
+			}
+		}
+	}
+}
+
+/*-------------------------------------
+	CODISEC
+-------------------------------------*/
+.codisec {
+	.codisec-information {
+		.tabs {
+			label {
+				order: 1;
+				display: block;
+				padding: 1rem 2rem;
+				margin-right: 0.2rem;
+				cursor: pointer;
+				color: #000;
+				font-weight: bold;
+				transition: all 0.2s ease-in-out;
+			}
+
+			.tab {
+				order: 99;
+				flex-grow: 1;
+				width: 100%;
+				display: none;
+				padding: 1rem;
+				background: rgb(206, 211, 215);
+				background: linear-gradient(90deg, rgba(206, 211, 215, 0.5158438375350141) 0%, rgba(148, 152, 154, 0.04525560224089631) 100%);
+			}
+
+			input[type="radio"] {
+				display: none;
+			}
+
+			input[type="radio"]:checked+label {
+				background: var(--color-azul-claro);
+				color: #fff;
+			}
+
+			input[type="radio"]:checked+label+.tab {
+				display: block;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+
+	/*-------------------------------------
+		START
+	-------------------------------------*/
+	.start {
+		.start-information {
+			.button-start {
+				transition: all 0.3s ease-in-out;
+
+				&:hover {
+					transform: scale(1.10);
+				}
+			}
+		}
+	}
+
+	/*-------------------------------------
+		DECLARATION
+	-------------------------------------*/
+	.declaration {
+		.declaration-information {
+			.declaration-item {
+				iframe {
+					display: block;
+					width: clamp(200px, 90vw, 900px);
+					height: 700px;
+				}
+
+				p {
+					display: none;
+				}
+			}
+		}
+	}
+}

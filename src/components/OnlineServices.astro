@@ -1,0 +1,67 @@
+---
+// src/components/OnlineServices.astro
+// ASEGÚRATE DE QUE ESTA LÍNEA "---" SEA LA LÍNEA 1 DEL ARCHIVO.
+type Service = {
+  href: string;
+  iconClass: string;
+  title: string;
+  description: string;
+};
+
+const services: Service[] = [
+  {
+    href: "https://municerroazul.gob.pe/mesa-de-parte/formulario.php",
+    iconClass: "fa-solid fa-desktop",
+    title: "Mesa de Partes Virtual",
+    description: "Inicia y gestiona tus trámites"
+  }
+];
+---
+<!-- 
+    LA SOLUCIÓN MÁGICA:
+    1. AÑADIMOS `z-10`: Esto pone la sección en una capa superior, por ENCIMA del slider.
+    2. REDUCIMOS EL MARGEN: Cambiamos `-mt-20` por `-mt-16` para un solapamiento más sutil.
+-->
+<!-- 
+    CAMBIOS CLAVE:
+    1. La sección ya no tiene un `container` interno, para controlar el ancho desde el div principal.
+    2. El margen negativo es más sutil (-mt-12) y el z-index se mantiene.
+-->
+<section class="relative z-10 py-16 px-4">
+    <div class="max-w-5xl mx-auto rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-400 p-8 text-white shadow-xl border border-white/20">
+        <!-- Elementos decorativos -->
+        <div class="absolute -top-10 -right-10 w-48 h-48 bg-white/10 rounded-full filter blur-xl opacity-50"></div>
+        <div class="absolute -bottom-12 -left-12 w-60 h-60 bg-white/5 rounded-full filter blur-2xl opacity-30"></div>
+
+        <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            
+            <div class="flex flex-col gap-3 text-center lg:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold leading-tight drop-shadow-md">
+                    Haz tus trámites en línea,<br /> fácil y seguro.
+                </h2>
+                <p class="text-base text-white/90 max-w-md mx-auto lg:mx-0">
+                    Evita colas y agiliza tus gestiones registrando tus documentos desde la comodidad de tu hogar u oficina.
+                </p>
+            </div>
+
+            <div class="w-full max-w-sm mx-auto">
+                {services.map((service) => (
+                    <a 
+                        href={service.href} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-white/95 backdrop-blur-sm text-gray-800 p-4 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex items-center gap-4 text-left hover:shadow-cyan-200/40"
+                    >
+                        <div class="bg-sky-100 text-sky-700 rounded-full w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                            <i class:list={[service.iconClass, "text-xl"]}></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base">{service.title}</h3>
+                            <p class="text-gray-600 text-sm">{service.description}</p>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,155 @@
+---
+import Layout from "../../layouts/BlogPost.astro";
+import HeroSlider from "../../components/HeroSlider.astro";
+import OnlineServices from "../../components/OnlineServices.astro";
+// --- CORREGIDO: Se añadió la extensión .astro ---
+import GerencyCards from "../../components/cards/gerency-cards"; 
+import ServicesCards from "../../components/cards/services-cards";
+// --- CORREGIDO: El nombre de la variable ahora coincide con el nombre del archivo y el uso ---
+import NoticiasYAnuncios from "../../components/NoticiasYAnuncios.astro";
+
+// --- TIPOS EXPLÍCITOS AÑADIDOS ---
+// Esto ayuda a TypeScript a entender la estructura de tus datos
+type GerencyCard = {
+  link: string;
+  image: string;
+  title: string;
+};
+
+type ServiceCard = {
+  image: string;
+  title: string;
+  description: string;
+};
+
+const gerencyCardsArray: GerencyCard[] = [
+	{ link: "/gerencia-infraestructura-desarrollo/gerencia-obras", image: "https://www.municerroazul.gob.pe/muni-resources/img/municipality-management/infrastructure-management.png", title: "Gerencia de Infraestructura, Desarrollo Urbano y Rural" },
+	{ link: "#", image: "https://www.municerroazul.gob.pe/muni-resources/img/municipality-management/economic-management.png", title: "Gerencia de Desarrollo Económico, Turismo y Promoción del Empleo" },
+	{ link: "#", image: "https://www.municerroazul.gob.pe/muni-resources/img/municipality-management/services-management.png", title: "Gerencia de Servicios a la Ciudad y Gestión Ambiental" },
+	{ link: "/gerencia-de-seguridad-ciudadana/gerencia-seguridad", image: "https://www.municerroazul.gob.pe/muni-resources/img/municipality-management/security-management.png", title: "Gerencia de Seguridad Ciudadana y Transporte" },
+	{ link: "/gerencia-tributaria/rentas", image: "https://www.municerroazul.gob.pe/muni-resources/img/municipality-management/administration-management.png", title: "Gerencia de Administración Tributaria" },
+	{ link: "#", image: "https://www.municerroazul.gob.pe/muni-resources/img/municipality-management/social-management.png", title: "Gerencia de Desarrollo Social y Participación Vecinal" },
+];
+
+const servicesCardsArray: ServiceCard[] = [
+	{ image: "https://www.municerroazul.gob.pe/muni-resources/img/our-services/public-cleaning.png", title: "Limpieza Pública", description: "Recolección de residuos y limpieza de áreas públicas." },
+	{ image: "https://www.municerroazul.gob.pe/muni-resources/img/our-services/parks-and-gardens.png", title: "Parques y Jardines", description: "Mantenimiento de áreas verdes y espacios recreativos." },
+	{ image: "https://www.municerroazul.gob.pe/muni-resources/img/our-services/citizen-security.png", title: "Seguridad Ciudadana", description: "Vigilancia y protección las 24 horas del día en el distrito." },
+];
+---
+
+<Layout title="Municipalidad Distrital de Cerro Azul">
+	<!-- Modal Emergente (Pop-up) -->
+	<div id="default-modal-2" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80">
+		<div class="relative p-4 w-full max-w-2xl">
+		  <div class="relative bg-white p-2 md:p-4 rounded-2xl shadow-lg">
+			<button type="button" id="close-modal-2" class="absolute -top-3 -right-3 text-white bg-red-600 hover:bg-red-700 rounded-full text-sm w-8 h-8 flex justify-center items-center">
+			  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+				<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1l6 6m0 0l6 6M7 7l6-6M7 7L1 13" />
+			  </svg>
+			  <span class="sr-only">Cerrar modal</span>
+			</button>
+			<img src="https://www.municerroazul.gob.pe/muni-resources/img/pop/03-Amnistia.jpg" alt="Amnistía Tributaria" class="rounded-lg w-full h-auto">
+		  </div>
+		</div>
+	</div>
+
+	<!-- Slider de Banners Principales -->
+	<HeroSlider />
+<!-- ===== SECCIÓN DE TRANSICIÓN CON OLA ===== -->
+    <div class="relative bg-white">
+
+        <!-- La Ola SVG que crea la transición -->
+        <div class="absolute -top-1 left-0 w-full h-24">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+                <path fill="#ffffff" d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+            </svg>
+        </div>
+
+	 <OnlineServices />
+
+
+	<!-- Contenedor principal para las secciones de contenido -->
+	<div class="container mx-auto px-4 py-16 md:py-24 space-y-20 md:space-y-28">
+		<!-- Mensaje Municipal -->
+		<article class="max-w-4xl mx-auto">
+			<h2 class="text-3xl md:text-5xl text-center font-bold text-[#00446b] mb-8">Mensaje Municipal</h2>
+			<div class="text-lg text-gray-700 space-y-4 text-justify">
+				<p class="font-semibold">Estimados vecinos(as):</p>
+				<p>Con el esfuerzo conjunto, hemos dado grandes pasos hacia un Cerro Azul más seguro, próspero y acogedor.</p>
+				<p>Reitero mi compromiso de seguir trabajando con transparencia, dedicación y una visión firme para asegurar una mejor calidad de vida para todos.</p>
+				<p>Agradezco profundamente su apoyo y confianza. <b>¡Sigamos trabajando juntos hacia un futuro lleno de posibilidades!</b></p>
+			</div>
+		</article>
+
+		<!-- Gerencias Municipales -->
+		<article>
+			<h2 class="text-3xl md:text-5xl text-center font-bold text-[#00446b] mb-12">Gerencias Municipales</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				{gerencyCardsArray.map((card) => (
+					<GerencyCards link={card.link} image={card.image} title={card.title} />
+				))}
+			</div>
+		</article>
+
+		<!-- Compromiso Municipal -->
+		<article class="max-w-4xl mx-auto">
+			<h2 class="text-3xl md:text-5xl text-center font-bold text-[#00446b] mb-8">Compromiso Municipal</h2>
+			<div class="text-lg text-gray-700 space-y-4 text-justify">
+				<p>Hoy, la Municipalidad Distrital de Cerro Azul se dedica a mejorar la calidad de vida de nuestros vecinos.</p>
+				<p>Unidos por un mismo objetivo, seguimos promoviendo el desarrollo económico y social del distrito.</p>
+				<p>Demostramos nuestro compromiso con el pueblo cerroazuleño, <b>y seguimos adelante, construyendo juntos un mejor futuro para todos.</b></p>
+			</div>
+		</article>
+
+		<!-- Nuestros Servicios -->
+		<article>
+			<h2 class="text-3xl md:text-5xl text-center font-bold text-[#00446b] mb-12">Nuestros Servicios</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				{servicesCardsArray.map((card) => (
+					<ServicesCards image={card.image} title={card.title} description={card.description} />
+				))}
+			</div>
+		</article>
+		<NoticiasYAnuncios />
+	</div>
+	
+</Layout>
+
+<script>
+	// Script para el Modal con comportamiento inteligente
+	document.addEventListener('DOMContentLoaded', () => {
+		const modal = document.getElementById('default-modal-2');
+		const closeButton = document.getElementById('close-modal-2');
+		let timesShown = 0; // Variable para contar cuántas veces se ha mostrado
+
+		// Función para mostrar el modal
+		function showModal() {
+			if (modal) {
+				modal.style.display = 'flex';
+				timesShown++; // Incrementamos el contador cada vez que se muestra
+			}
+		}
+
+		// 1. Mostrar el modal inmediatamente al cargar la página
+		showModal();
+
+		// 2. Escuchar el evento de cierre
+		if (closeButton && modal) {
+			closeButton.addEventListener('click', () => {
+				// Primero, ocultar el modal
+				modal.style.display = 'none';
+
+				// 3. Comprobar si es la primera vez que se cierra (timesShown será 1)
+				// Si ya se ha mostrado 2 veces, no hacemos nada más.
+				if (timesShown < 2) {
+					// Si es la primera vez, iniciar el temporizador de 20 segundos
+					// para que vuelva a aparecer UNA SOLA VEZ MÁS.
+					setTimeout(() => {
+						showModal();
+					}, 20000); // 20000 milisegundos = 20 segundos
+				}
+			});
+		}
+	});
+</script>

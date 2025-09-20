@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/BlogPost.astro';
+
+const acuerdos = [
+    { año: 2025, url: "https://www.gob.pe/institucion/municerroazul/colecciones/59955-ordenanza-municipal-2025" },
+    { año: 2024, url: "https://www.gob.pe/institucion/municerroazul/colecciones/31603-ordenanza-municipal-2024" },
+    { año: 2023, url: "https://www.gob.pe/institucion/municerroazul/colecciones/16560-ordenanza-municipal-2023" },
+    { año: 2022, url: "https://www.gob.pe/institucion/municerroazul/colecciones/5163-ordenanza-municipal-2022" },
+    { año: 2021, url: "https://www.gob.pe/institucion/municerroazul/colecciones/4005-ordenanza-municipal-2021" },
+    { año: 2020, url: "https://www.gob.pe/institucion/municerroazul/colecciones/4003-ordenanza-municipal-2020" },
+    { año: 2019, url: "https://www.gob.pe/institucion/municerroazul/colecciones/3994-ordenanza-municipal-2019" },
+    { año: 2018, url: "https://www.gob.pe/institucion/municerroazul/colecciones/3985-ordenanza-municipal-2018" },
+    { año: 2017, url: "https://www.gob.pe/institucion/municerroazul/colecciones/8364-ordenanza-municipal-2017" },
+    { año: 2016, url: "https://www.gob.pe/institucion/municerroazul/colecciones/8430-ordenanza-municipal-2016" },
+    { año: 2015, url: "https://www.gob.pe/institucion/municerroazul/colecciones/9716-ordenanza-municipal-2015" },
+    { año: 2014, url: "#" },
+    { año: 2013, url: "https://www.gob.pe/institucion/municerroazul/colecciones/10509-ordenanza-municipal-2013" },
+    { año: 2012, url: "https://www.gob.pe/institucion/municerroazul/colecciones/10772-ordenanza-municipal-2012" },
+    { año: 2011, url: "https://www.gob.pe/institucion/municerroazul/colecciones/11576-ordenanza-municipal-2011" },
+    { año: 2010, url: "https://www.gob.pe/institucion/municerroazul/colecciones/12364-ordenanza-municipal-2010" },
+    { año: 2009, url: "https://www.gob.pe/institucion/municerroazul/colecciones/13447-ordenanza-municipal-2009" }
+];
+---
+
+<Layout title="Ordenanzas Municipales">
+    <section class="municipality-documents flex flex-col items-center justify-center gap-2 my-[8rem] px-[1.2rem] md:w-[900px] xl:w-[1200px] mx-auto">
+        <article class="municipality-documents-title mb-[3rem]">
+            <h2 class="mb-[3rem] text-3xl md:text-4xl lg:text-5xl text-center font-semibold">
+                Ordenanzas Municipales
+            </h2>
+        </article>
+
+        <article class="municipality-documents-information flex flex-col items-center justify-center gap-8 md:grid md:grid-cols-2 md:place-items-center xl:grid-cols-3">
+            {acuerdos.map((acuerdo) => (
+                <a class="border border-[#015da8] px-4 py-2 rounded-[var(--border-radius)] transition-all duration-300 ease-in-out xl:hover:scale-110"
+                   href={acuerdo.url}>
+                    Ordenanzas Municipales - <b>año {acuerdo.año}</b>
+                </a>
+            ))}
+        </article>
+    </section>
+</Layout>

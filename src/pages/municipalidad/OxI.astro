@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/BlogPost.astro';
+
+const oxi = [
+    { title: "01.1 Bases de Selección Empresa Privada y Financiadora y Ejecutora", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/01.1-BASES-SELECCION-EMPRESA-PRIVADA-FINANCIADORA-Y-EJECUTORA.pdf" },
+    { title: "01.2 Anexo 15 Convocatoria de la Empresa Privada para Aprobación", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/01.2-anexo-15-convocatoria-de-la-empresa-privada-para-aprobacion.pdf" },
+    { title: "02.1 Bases de Selección Entidad Privada Supervisora", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/02.1-BASES-ENTIDAD-PRIVADA-SUPERVISORA.pdf" },
+    { title: "02.2 Anexo 16 Convocatoria de la Entidad Privada Supervisora", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/02.2-anexo-16-convocatoria-de-la-entidad-privada-supervisora.pdf" },
+    { title: "03.1 Acta Absolución Consultas Proc Supervisión", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/acta absolucion consultas proc 002-2025 supervision20250506_16454217.pdf" },
+    { title: "03.2 Bases Integradas de la Entidad Privada Supervisora", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/02.2-BASES_INTEGRADAS_ENTIDAD_PRIVADA_SUPERVISORA.pdf" },
+    { title: "04.1 Acta Integración de Bases Proceso Empresa Privada", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/acta integracion de bases proceso 01-2025 empresa privada20250506_16343611.pdf" },
+    { title: "04.2 Bases Integradas de Selección de la Empresa Privada Financiadora y Ejecutora", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/01.2-BASES_INTEGRADAS_SELECCION_EMPRESA_PRIVADA_FINANCIADORA_Y_EJECUTORA.pdf" },
+    { title: "Circular 001-2025 Modificación Cronograma Empresa Privada", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/CIRCULAR-001-2025-MODIFICACION-CRONOGRAMA-EMPRESA-PRIVADA.pdf" },
+    { title: "Circular 002-2025 Modificación Cronograma", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/CIRCULAR-002-2025-MODIFICACION-CRONOGRAMA.pdf" },
+    { title: "Acta de Adjudicación de la Buena Pro Proceso de Selección - Ejecución", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/ACTA-DE-ADJUDICACION-DE-LA-BUENA-PRO-PROCESO-DE-SELECCION-N001-2025-OXI-EJECUCION.pdf" },
+    { title: "Acta de Adjudicación de la Buena Pro Proceso de Selección - Supervisión", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/ACTA-DE-ADJUDICACION-DE-LA-BUENA-PRO-PROCESO-DE-SELECCION-N002-2025-OXI-SUPERVISION.pdf" },
+    { title: "Acta de Evaluación de Propuestas Proceso de Selección - Ejecución", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/ACTA-DE-EVALUACION-DE-PROPUESTAS-PROCESO-DE-SELECCION-N001-2025-OXI-EJECUCION.pdf" },
+    { title: "Acta de Evaluación de Propuestas Proceso de Selección - Supervisión", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/ACTA-DE-EVALUACION-DE-PROPUESTAS-PROCESO-DE-SELECCION-N002-2025-OXI-SUPERVISION.pdf" },
+    { title: "Acta de Recepción de Sobres N° 1 y 2 | Proceso de Selección - Supervisión", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/ACTA-DE-RECEPCION-DE-SOBRES-N1-Y-2-PROCESO-DE-SELECCION-N002-2025-OXI-SUPERVISION.pdf" },
+    { title: "Acta de Recepción de Sobres N° 1, 2 y 3 | Proceso de Selección - Ejecución", pdf: "https://www.municerroazul.gob.pe/muni-resources/pdf/oxi/ACTA-DE-RECEPCION-DE-SOBRES-N1,2-Y-3-PROCESO-DE-SELECCION-N001-2025-OXI-EJECUCION.pdf" }
+]
+---
+
+<Layout title="OxI">
+    <section class="oxi flex flex-col items-center justify-center gap-2 my-[8rem] px-[1.2rem] md:w-[900px] xl:w-[1200px] mx-auto">
+        <article class="oxi-title mb-[5rem]">
+            <h2 class="[font-family:var(--font-family-modern)] text-3xl md:text-4xl lg:text-5xl text-center font-semibold">Creación y mejoramiento de la Transitabilidad del Cercado de Cerro Azul</h2>
+        </article>
+        <article class="oxi-information flex flex-col items-center justify-center gap-8 xl:grid xl:grid-cols-2 xl:place-items-center">
+            {oxi.map((oxi) => (
+                <a class="w-[100%] border border-[#015da8] px-4 py-2 rounded-[var(--border-radius)] transition-all duration-300 ease-in-out xl:h-[80px] xl:flex xl:items-center xl:hover:scale-103"
+                href={oxi.pdf}>
+                    {oxi.title}
+                </a>
+            ))}
+        </article>
+    </section>
+</Layout>

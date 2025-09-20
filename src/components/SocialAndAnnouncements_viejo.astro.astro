@@ -1,0 +1,93 @@
+// src/components/SocialAndAnnouncements.astro
+---
+// --- TIPOS EXPLÍCITOS ---
+// Definimos la "forma" de un flyer para que TypeScript esté contento.
+type AnnouncementFlyer = {
+    src: string;
+    alt: string;
+};
+
+// --- DATOS ---
+const facebookPageUrl = "https://www.facebook.com/MunicipalidadDeCerroAzul";
+
+const announcementFlyers: AnnouncementFlyer[] = [
+    { src: "https://www.municerroazul.gob.pe/muni-resources/img/pop/03-Amnistia.jpg", alt: "Anuncio de Rendición de Cuentas 2025" },
+    { src: "https://www.municerroazul.gob.pe/muni-resources/img/pop/03-Amnistia.jpg", alt: "Anuncio de Campaña de Salud" },
+    { src: "https://www.municerroazul.gob.pe/muni-resources/img/pop/03-Amnistia.jpg", alt: "Anuncio de Evento Cultural" },
+    { src: "https://www.municerroazul.gob.pe/muni-resources/img/pop/03-Amnistia.jpg", alt: "Anuncio de Amnistía Tributaria" }, 
+];
+---
+
+<section class="bg-white py-16 px-4">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            <!-- Columna Izquierda: REDES SOCIALES -->
+            <div>
+                <h2 class="text-2xl font-bold text-[#00446b] mb-4 border-b-2 border-gray-200 pb-2">REDES SOCIALES</h2>
+                <div 
+                    class="fb-page" 
+                    data-href={facebookPageUrl}
+                    data-tabs="timeline" 
+                    data-height="500" 
+                    data-adapt-container-width="true">
+                    <blockquote cite={facebookPageUrl} class="fb-xfbml-parse-ignore">
+                        <a href={facebookPageUrl}>Municipalidad Distrital de Cerro Azul</a>
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: ANUNCIOS -->
+            <div>
+                <h2 class="text-2xl font-bold text-[#00446b] mb-4 border-b-2 border-gray-200 pb-2">ANUNCIOS</h2>
+                <div class="swiper-anuncios relative rounded-lg overflow-hidden bg-gray-100">
+                    <div class="swiper-wrapper">
+                        {announcementFlyers.map(flyer => (
+                            <div class="swiper-slide">
+                                <img src={flyer.src} alt={flyer.alt} class="w-full h-full object-contain" />
+                            </div>
+                        ))}
+                    </div>
+                    <div class="swiper-button-next text-white drop-shadow-md"></div>
+                    <div class="swiper-button-prev text-white drop-shadow-md"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    import Swiper from 'swiper';
+    import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+    import 'swiper/css';
+    import 'swiper/css/navigation';
+    import 'swiper/css/pagination';
+
+    new Swiper('.swiper-anuncios', {
+        modules: [Navigation, Pagination, Autoplay],
+        loop: true,
+        autoplay: { 
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+
+<style>
+    .swiper-anuncios .swiper-pagination-bullet {
+        background-color: white;
+        opacity: 0.6;
+    }
+    .swiper-anuncios .swiper-pagination-bullet-active {
+        opacity: 1;
+    }
+</style>

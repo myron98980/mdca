@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/BlogPost.astro";
+
+const privateDocuments = [
+    { title: "Cuadro de Valores Unitarios del presente año 2025", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/CVU-JUNIO-2025.pdf" },
+    { title: "ANEXO I: Formulario Único de Habilitaciones Urbanas - FUHU", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-I.pdf" },
+    { title: "ANEXO II: Formulario Único de Edificación - FUE", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-II.pdf" },
+    { title: "ANEXO III: Formulario Único de Habilitación Urbana - FUHU: Recepción de Obras", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-III.pdf" },
+    { title: "Anexo IV: Formulario Único de Edificación - FUE: Conformidad de Obra y Declaración de Edificación", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-IV.pdf" },
+    { title: "Anexo V: Anexo A - Datos de Condominios: Personas Naturales", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-V.pdf" },
+    { title: "Anexo VI: Anexo B - Datos de Condominios: Personas Jurídicas", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-VI.pdf" },
+    { title: "Anexo VII: Anexo C - Pre declaratoria de Edificación", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-VII.pdf" },
+    { title: "Anexo VIII: Anexo E - Independización de Terreno Rústico / Habilitación Urbana", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-VIII.pdf" },
+    { title: "Anexo IX: Anexo F - Sub división de Lote Urbano", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-IX.pdf" },
+    { title: "Anexo X: Anexo G - Regularización de Habilitación Urbana Ejecutada", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-X.pdf" },
+    { title: "Anexo XI: Anexo H - Inicio de Obra", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XI.pdf" },
+    { title: "Anexo XII: Acta de Verificación y Dictamen: Habilitación Urbana", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XII.pdf" },
+    { title: "Anexo XIII: Acta de Verificación y Dictamen: Edificación", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XIII.pdf" },
+    { title: "Anexo XIV: Plano de Ubicación / Esquema de Localización", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XIV.pdf" },
+    { title: "Anexo XV: Carta de Seguridad de Obra", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XV.pdf" },
+    { title: "Anexo XVI: Informe de Verificación Administrativa - Habilitación Urbana", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XVI.pdf" },
+    { title: "Anexo XVII: Informe de Verificación Administrativa - Edificación", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XVII.pdf" },
+    { title: "Anexo XVIII: Informe Recepción de Obras- Habilitación Urbana", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XVIII.pdf" },
+    { title: "Anexo XIX: Informe de Conformidad de Obra - Edificación", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XIX.pdf" },
+    { title: "Anexo XX: Formulario Único de Edificación - FU - Solicitud de Conformidad de Obra y Declaratoria de Edificación Anticipadas", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XX.pdf" },
+    { title: "Anexo XXI: Formulario Único - Solicitud de Declaración Municipal de Edificación Terminada", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/works-management/private-works/Anexo-XXI.pdf" },
+]
+
+---
+
+<Layout title="Sub Gerencia de Obras Privadas Catastro y Habilitaciones Urbanas">
+    <section class="private flex flex-col items-center justify-center gap-2 my-[8rem] px-[1.2rem] md:w-[900px] xl:w-[1200px] mx-auto">
+        <article class="private-title">
+            <h3 class="mb-[3rem] text-3xl md:text-4xl lg:text-5xl text-center font-semibold">Sub Gerencia de Obras Privadas Catastro y Habilitaciones Urbanas</h3>
+            <p class="mb-[3rem]">Esta gerencia es la encargada de regular, supervisar y gestionar las obras privadas en el municipio, garantizando el cumplimiento de normativas de construcción. Además, administra el catastro municipal y tramita habilitaciones urbanas, promoviendo un desarrollo ordenado y sostenible del territorio.</p>
+        </article>
+        <article class="private-cards flex flex-col items-center justify-center gap-8 md:grid md:grid-cols-2 md:place-items-center xl:grid-cols-3">
+            {privateDocuments.map((privateDocuments) => (
+                <div class="private-card w-full max-w-full h-[220px] flex flex-col items-center justify-evenly p-4 text-center [box-shadow:var(--box-shadow)] rounded-[var(--border-radius)] transition-all duration-300 ease-in-out">
+                    <p>{privateDocuments.title}</p>
+                    <a class="border border-[#015da8] px-4 py-2 rounded-[var(--border-radius)] transition-all duration-300 ease-in-out xl:hover:scale-110" href={privateDocuments.url}>Descargar</a>
+                </div>
+            ))}
+        </article>
+    </section>
+</Layout>

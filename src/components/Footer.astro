@@ -1,0 +1,114 @@
+---
+import "../styles/global.css";
+const today = new Date();
+
+const municipalRegulations = [
+	{ title: "Acuerdos de Concejo", url: "/documentos-municipales/acuerdo-de-concejo" },
+	{ title: "Decretos de Alcaldía", url: "/documentos-municipales/decretos-de-alcaldia" },
+	{ title: "Resoluciones de Alcaldía", url: "/documentos-municipales/resoluciones-de-alcaldia" },
+	{ title: "Resoluciones de Gerencia Municipal", url: "/documentos-municipales/resoluciones-de-gerencia-municipal" },
+	{ title: "Ordenanzas Municipales", url: "/documentos-municipales/ordenanzas-municipales" },
+]
+
+const managementInstruments = [
+	{ title: "TUPA", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/ORDENANZA-MUNICIPAL-N-012-2022-MDCA.pdf" },
+	{ title: "ROF", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/ORDENANZA-MUNICIPAL-N-010-2021-MDCA.pdf" },
+	{ title: "RAS", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/ORDENANZA-MUNICIPAL-N-016-2019-MDCA.pdf" },
+	{ title: "RIC", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/RIC-MDCA.pdf" },
+	{ title: "POI-2023-2025", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/POI-MDCA.pdf" },
+	{ title: "PEI-2023-2027", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/PEI-MDCA.pdf" },
+	{ title: "MOF", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/MOF-MDCA.pdf" },
+	{ title: "MANUAL CLASIFICADOR CARGO - MCC", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/MANUAL-DE-CLASIFICADOR-DE-CARGOS-MCC.pdf" },
+	{ title: "Reglamento Interno de Trabajo del Personal Administrativo de la MDCA", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/RIT-REGLAMENOT-INTERNO-DE-TRABAJO-DEL-PERSONAL-ADMINISTRATIVOS-06-05-2023.pdf" },
+	{ title: "Reglamento Interno de Trabajo del Personal Obrero de la MDCA", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/REGLAMENTO-INTERNO-DE-TRABAJO-DE-TRABAJADORES-OBREROS-DE-LA-MDCA.pdf" },
+	{ title: "CAP", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/management-instruments/CAP-2011-ORDENANZA-MUNICIPAL-N-011-2011-MDCA.pdf" },
+]
+
+const linksOfInterest = [
+	{ title: "Informe de Rendición de Cuentas de Titulares 2024", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/link-interest/links/INFORME-DE-RENDICION-DE-CUENTAS-DE-TITULARES-2024.pdf" },
+	{ title: "Portal de Transparencia", url: "https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=10601" },
+	{ title: "Acta de Transferencia 2023", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/link-interest/links/ANEXO-2207-TGN003003-AGA-281222211456.pdf" },
+	{ title: "Rendición de cuentas por cese 2022", url: "#" },
+	{ title: "Organigrama", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/link-interest/links/Organigrama_2024.pdf" },
+	{ title: "Modificaciones al Cuadro Multianual", url: "/municipalidad/cuadro-multianual-de-necesidades" },
+	{ title: "Aviso de Saneamiento Físico Legal", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/link-interest/links/AVISO-DE-SANEAMIENTO-FISICO-LEGAL.pdf" },
+	{ title: "Cuadro Multianual de Necesidades 2024 - 2026", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/link-interest/links/Cuadro-Multianual-de-Necesidades-2024-2026.pdf" },
+	{ title: "Cuadro Multianual de Necesidades 2025 - 2027", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/link-interest/links/ANEXO-CMN-2025-2027.pdf" },
+	{ title: "Modelo de Solicitud de Acceso a la Información Publica", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/link-interest/transparency-request/Solicitud_AIP.pdf" },
+	{ title: "Declaraciones Juradas", url: "/municipalidad/declaraciones-juradas" },
+	{ title: "Aviso a la Comunidad Cerroazuleña", url: "https://www.municerroazul.gob.pe/muni-resources/pdf/link-interest/links/AVISO-A-LA-COMUNIDAD-DE-CERRO-AZUL.pdf" },
+	{ title: "Audiencia Pública", url: "/gerencia-de-seguridad-ciudadana/audiencia-publica" },
+	{ title: "OxI Pistas Cercado Cerro Azul CUI: 2378844", url: "/municipalidad/OxI" },
+]
+
+---
+
+<footer>
+	<section class="footer-container w-full flex flex-col p-8 pb-6 bg-[var(--color-azul-claro)] text-white text-center md:w-full md:grid md:[grid-template-columns:50%_50%] md:gap-4 xl:grid xl:[grid-template-columns:20%_20%_30%_28%] xl:gap-4">
+		<article class="footer-municipal mt-4 mb-7">
+			<div>
+				<h2 class="text-xl text-left font-semibold mb-7">Normas municipales</h2>
+				<ul class="text-left space-y-2 text-lg">
+					{municipalRegulations.map((municipalRegulations) => (
+						<li class="group transition-transform duration-500 ease-in-out hover:font-semibold hover:translate-x-2">
+							<a href={ municipalRegulations.url }>{ municipalRegulations.title }</a>
+						</li>
+					))}
+				</ul>
+			</div>
+		</article>
+		<article class="footer-municipal mt-4 mb-7">
+			<div>
+				<h2 class="text-xl text-left font-semibold mb-7">Instrumentos de gestión</h2>
+				<ul class="text-left space-y-2 text-lg">
+					{managementInstruments.map((managementInstruments => (
+						<li class="group transition-transform duration-500 ease-in-out hover:font-semibold hover:translate-x-2">
+							<a href={managementInstruments.url}>{managementInstruments.title}</a>
+						</li>
+					)))}
+				</ul>
+			</div>
+		</article>
+		<article class="footer-municipal link-interest mt-4">
+			<div>
+				<h2 class="text-xl text-left font-semibold mb-7">Enlaces de interés</h2>
+				<ul class="text-left space-y-2 text-lg">
+					{linksOfInterest.map((linksOfInterest) => (
+						<li class="group transition-transform duration-500 ease-in-out hover:font-semibold hover:translate-x-2">
+							<a href={linksOfInterest.url}>{linksOfInterest.title}</a>
+						</li>
+					))}
+				</ul>
+			</div>
+		</article>
+		<article class="footer-municipal flex flex-col gap-8 mt-4 mb-7 text-left text-lg">
+			<div>
+				<h2 class="text-xl font-semibold mb-7">Horario de atención:</h2>
+				<p>Martes a Viernes: <span class="font-semibold">8:00 a.m. a 1:00 p.m.</span> | <span class="font-semibold">2:00 p.m. a 5:30 p.m.</span></p>
+				<p>Sabado: <span class="font-semibold">8:00 a.m. a 1:00 p.m.</span></p>
+				<p>Domingo: <span class="font-semibold">Cerrado.</span></p>
+			</div>
+			<div>
+				<h2 class="text-xl font-semibold mb-7">Números municipales:</h2>
+				<p class="flex items-center flex-wrap">Oficina de Rentas: <a href="https://wa.me/51963829029" class="flex gap-1 ml-1"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24"> 963 829 029</a></p>
+				<p class="flex items-center flex-wrap">Oficina de Trámite Documentario: <a href="tel:+51965161805" class="flex gap-1 ml-1"><img src="https://www.municerroazul.gob.pe/muni-resources/img/footer/telefono.png" alt="Teléfono" class="w-6 h-6 object-contain">965 161 80</a></p>
+				<p class="flex items-center flex-wrap">Oficina de Obras Privadas: <a href="tel:+51961448915" class="flex gap-1 ml-1"><img src="https://www.municerroazul.gob.pe/muni-resources/img/footer/telefono.png" alt="Teléfono" class="w-6 h-6 object-contain"> 961 448 915</a></p>
+				<p class="flex items-center flex-wrap">Oficina de Sub Gerencia de Fiscalización: <a href="tel:+51963860293" class="flex gap-1 ml-1"><img src="https://www.municerroazul.gob.pe/muni-resources/img/footer/telefono.png" alt="Teléfono" class="w-6 h-6 object-contain"> 963 860 293</a></p>
+			</div>
+			<div>
+				<h2 class="text-xl font-semibold mb-7">Números de emergencia:</h2>
+				<p class="flex items-center flex-wrap">Equipo de Serenazgo: <a class="flex gap-1 ml-1" href="tel:+51968315257"><img src="https://www.municerroazul.gob.pe/muni-resources/img/footer/telefono.png" alt="Teléfono" class="w-6 h-6 object-contain"> 968 315 257</a></p>
+				<p class="flex items-center flex-wrap">Comisaría de Cerro Azul: <a class="flex gap-1 ml-1" href="tel:+51958867875"><img src="https://www.municerroazul.gob.pe/muni-resources/img/footer/telefono.png" alt="Teléfono" class="w-6 h-6 object-contain"> 958 867 875</a></p>
+				<p class="flex items-center flex-wrap">Bomberos Cañete: <a class="flex gap-1 ml-1" href="tel:+51015812004"><img src="https://www.municerroazul.gob.pe/muni-resources/img/footer/telefono.png" alt="Teléfono" class="w-6 h-6 object-contain"> 01 581 2004</a></p>
+			</div>
+		</article>
+	</section>
+	<section class="max-w-[100%] flex flex-col gap-6 bg-[var(--color-azul-oscuro)] py-7 text-center text-lg text-[#fff]">
+		<article>
+			<p>&#x1F4CD; Calle Alfonso Ugarte 500, Distrito de Cerro Azul, Provincia de Cañete - Región Lima; Perú.</p>
+		</article>
+		<article>
+			<p>&copy; {today.getFullYear()} Oficina de Informática y Estadísticas. All rights reserved.</p>
+		</article>
+	</section>	
+</footer>

@@ -1,0 +1,187 @@
+---
+import Layout from "../../layouts/BlogPost.astro";
+---
+
+<Layout title="Rentas">
+    <section class="rents mt-[5rem]">
+        <article class="rents-calendar w-full py-20 px-0 [background-color:var(--color-azul-claro)]">
+            <h3 class="[font-family:var(--font-family-modern)] text-center font-semibold text-white mb-20 px-[1.2rem] text-3xl md:text-4xl md:px-0 lg:text-5xl">Calendario Tributario 2025</h3>
+            <div class="rents-cards flex flex-col items-center justify-center gap-8 md:grid md:grid-cols-2 md:place-items-center xl:grid-cols-4">
+                <div class="rents-card w-[300px] h-auto p-4 flex flex-col items-center justify-center bg-[#fff] [border-radius:var(--border-radius)] xl:w-[300px] transition-all duration-300 ease-linear xl:hover:scale-105">
+                    <img class="w-[100px]" src="https://www.municerroazul.gob.pe/muni-resources/img/tax/calendar.png" alt="calendar-primera" />
+                    <p>28 de Febrero</p>
+                    <p class="text-xl font-semibold">Primera Cuota 2025</p>
+                </div>
+                <div class="rents-card w-[300px] h-auto p-4 flex flex-col items-center justify-center bg-[#fff] [border-radius:var(--border-radius)] xl:w-[300px] transition-all duration-300 ease-linear xl:hover:scale-105">
+                    <img class="w-[100px]" src="https://www.municerroazul.gob.pe/muni-resources/img/tax/calendar.png" alt="calendar-segundo" />
+                    <p>31 de Mayo</p>
+                    <p class="text-xl font-semibold">Segunda Cuota 2025</p>
+                </div>
+                <div class="rents-card w-[300px] h-auto p-4 flex flex-col items-center justify-center bg-[#fff] [border-radius:var(--border-radius)] xl:w-[300px] transition-all duration-300 ease-linear xl:hover:scale-105">
+                    <img class="w-[100px]" src="https://www.municerroazul.gob.pe/muni-resources/img/tax/calendar.png" alt="calendar-tercera" />
+                    <p>29 de Agosto</p>
+                    <p class="text-xl font-semibold">Tercera Cuota 2025</p>
+                </div>
+                <div class="rents-card w-[300px] h-auto p-4 flex flex-col items-center justify-center bg-[#fff] [border-radius:var(--border-radius)] xl:w-[300px] transition-all duration-300 ease-linear xl:hover:scale-105">
+                    <img class="w-[100px]" src="https://www.municerroazul.gob.pe/muni-resources/img/tax/calendar.png" alt="calendar-cuarta" />
+                    <p>29 de Noviembre</p>
+                    <p class="text-xl font-semibold">Cuarta Cuota 2025</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="rents-information flex flex-col items-center justify-center gap-8 mt-[2rem] mb-[8rem] px-[1.2rem] md:w-[900px] xl:w-[1200px] mx-auto">
+        <article class="rents-documents">
+            <div class="rents-title text-center font-semibold">
+                <h2 class="text-xl">Información</h2>
+                <h2 class="text-lg my-2">Tributos Municipales</h2>
+                <ol class="list-decimal pl-5">
+                    <li class="text-left"><span class="text-lg">Declaraciones Juradas</span>
+                        <ul class="list-disc pl-5">
+                            <li class="text-md font-light"><a class="text-[#015da8]" href="https://www.municerroazul.gob.pe/muni-resources/pdf/tax-management/rents/municipal-taxes/declaraciones-juradas/PU.pdf">Declaración de Predio Urbano - PU</a></li>
+                            <li class="text-md font-light"><a class="text-[#015da8]" href="https://www.municerroazul.gob.pe/muni-resources/pdf/tax-management/rents/municipal-taxes/declaraciones-juradas/HR.pdf">Hoja Resumen - HR</a></li>
+                            <li class="text-md font-light"><a class="text-[#015da8]" href="https://www.municerroazul.gob.pe/muni-resources/pdf/tax-management/rents/municipal-taxes/declaraciones-juradas/PR.pdf">Predio Rústico - PR</a></li>
+                            <li class="text-md font-light">Formato de Solicitud</li>
+                        </ul>
+                    </li>
+                    <li class="text-left"><span class="text-lg">Valores</span>
+                        <ul class="list-disc pl-5">
+                            <li class="text-md font-light">Cuadro de Valores Unitarios</li>
+                        </ul>
+                    </li>
+                    <li class="text-left"><span class="text-lg">Normas Legales</span>
+                        <ul class="list-disc pl-5">
+                            <li class="text-md font-light">Ordenanza Municipal N° 018-2023-MDCA</li>
+                            <li class="text-md font-light">Resolución de Gerencia Municipal N° 013-2023-MDCA</li>
+                        </ul>
+                    </li>
+                </ol>
+                <div class="rents-title text-center font-semibold text-lg">
+                    <h2 class="my-2">Fiscalización Tributaria</h2>
+                    <ol class="list-decimal pl-5">
+                        <li class="text-left"><span class="text-lg">Normas Legales</span>
+                            <ul class="list-disc pl-5">
+                                <li class="text-md font-light">Resolución de Gerencia Municipal N° 012-2023-MDCA</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div class="rents-title text-center font-semibold text-lg">
+                    <h2 class="mt-2 mb-7">Bancos</h2>
+                    <div class="flex justify-center items-center gap-10">
+                        <img class="w-30 rounded-3xl mb-8 md:w-40 md:rounded-4xl md:mb-10 lg:w-50 lg:rounded-4xl lg:mb-13" src="https://www.municerroazul.gob.pe/muni-resources/img/tax/banco-nacion.jpg" alt="banco-de-la-nacion" />
+                        <img class="w-30 md:w-40 lg:w-50" src="https://www.municerroazul.gob.pe/muni-resources/img/tax/banco-interbank.png" alt="banco-interbank" />
+                    </div>
+                </div>
+            </div>
+            <article class="rents-declaration">
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Declaraciones Juradas por Inscripción</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md">Exhibir el documento de identidad.</li>
+                        <li class="text-md">Presentación de formatos HR o PU debidamente llenados y firmados por el contribuyente o su representante legal.</li>
+                        <li class="text-md">Exhibir el documento que acredite el hecho imponible según corresponda <b>(minuta escritura pública, ficha registral u otros)</b>, o los datos materia de modificación <b>(nombre del contribuyente, documento de identidad, tipo de contribuyente, representante legal, domicilio fiscal, etc).</b></li>
+                        <li class="text-md">En caso de actuar a través de representante deberá acreditarse la representación mediante documento público y/o privado con firma legalizada notarialmente o autenticada por fedatario de la Administración Tributaria Municipal.</li>
+                        <li class="text-md">Señalar domicilio fiscal, correo eléctrico, y número telefónico.</li>
+                    </ul>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Declaraciones Juradas Rectificatorias</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md">Presentar HR <b>(Hoja Resumen)</b> y PU <b>(Predio Urbano)</b>, los cuales deberán encontrarse debidamente llenos.</li>
+                        <li class="text-md">Documento de fecha cierta que acredite la rectificación de la información predial <b>(Ficha Catastral, Declaratoria de Fábrica, otro de ser el caso).</b></li>
+                        <li class="text-md">Exhibir el documento de identidad del propietario o de su representante de ser el caso.</li>
+                        <li class="text-md">En el caso de representación, presentar poder específico en documento público o privado con firma legalizada ante notario o fedateada.</li>
+                    </ul>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Constancia de no adeudo</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md">Que no tenga deuda pendiente de pago.</li>
+                        <li class="text-md">Exhibir el documento de identidad del propietario o de su representante de ser el caso.</li>
+                        <li class="text-md">En el caso de representación, presentar poder específico en documento público o privado con firma legalizada ante notario o fedateada.</li>
+                        <li class="text-md">En el caso de ser Persona Jurídica, presentar el poder mediante documento público o privado.</li>
+                        <li class="text-md">Pago por derecho del presente trámite <b>S/. 25.92 nuevos soles.</b></li>
+                    </ul>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Declaración Jurada Pensionista</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md"><b>SOLICITUD</b></li>
+                        <li class="text-md"><b>EXHIBIR EL DOCUMENTO DE IDENTIDAD</b> del propietario o de su representante de ser el caso.</li>
+                        <li class="text-md"><b>EN EL CASO DE REPRESENTACIÓN</b> presentar el poder especifico en documento público o privado con firma legalizada ante el notario o fedateada.</li>
+                        <li class="text-md"><b>EXHIBIR EL ORIGINAL Y PRESENTAR COPIA SIMPLE</b> de la resolución o documento que le confiere la calidad de pensionista.</li>
+                        <li class="text-md"><b>EXHIBIR EL ORIGINAL Y PRESENTAR COPIA SIMPLE</b> de la última boleta de pago o liquidación de pensión (ingreso bruto no mayor a 1 UIT).</li>
+                        <li class="text-md"><b>PRESENTAR CERTIFICADO POSITIVO</b> de propiedad emitido por la SUNARP. En caso de presentar certificado negativo de propiedad, deberá adjuntar documento que acredite la titularidad del predio.</li>
+                    </ul>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Declaración Jurada de Adulto Mayor No Pensionista</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md"><b>SOLICITUD</b> dirigida al alcalde.</li>
+                        <li class="text-md"><b>COPIA DEL DOCUMENTO DE IDENTIDAD</b> del propietario o de su representante de ser el caso.</li>
+                        <li class="text-md"><b>EN EL CASO DE REPRESENTACIÓN</b> presentar el poder especifico en documento público o privado con firma legalizada ante el notario o fedateada.</li>
+                        <li class="text-md"><b>EXHIBIR EL ORIGINAL Y PRESENTAR COPIA DE BOLETA</b> de pago de honorarios o documentos que acredite que el ingreso del solicitante y de ser el caso de su conyugue, no es mayor a 1 UIT <b>o deberán suscribir una declaración jurada.</b></li>
+                        <li class="text-md"><b>COPIA SIMPLE</b> de licencia o autorización de funcionamiento, en caso se destine parcialmente el inmueble para fines productivos, comerciales y/o profesionales.</li>
+                        <li class="text-md"><b>PRESENTAR CERTIFICADO POSITIVO</b> de propiedad emitido por la <b>SUNARP.</b> En caso de presentar un certificado negativo de propiedad, deberá adjuntar documento que acredite la titularidad del predio.</li>
+                        <li class="text-md"><b>DOCUMENTO ADICIONAL</b> que acredite o respalde las afirmaciones contenidas en la declaración jurada.</li>
+                    </ul>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Certificado Domiciliario</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md"><b>SOLICITUD</b> dirigida al alcalde.</li>
+                        <li class="text-md"><b>COPIA DEL DOCUMENTO DE IDENTIDAD</b></li>
+                        <li class="text-md"><b>DECLARACIÓN JURADA SIMPLE</b> en la que conste de su domicilio actual</li>
+                        <li class="text-md"><b>COPIA DE RECIBO DE SERVICIOS BASICOS</b> dentro de los últimos dos años, debiendo adjuntar el recibo del último mes de cada año.</li>
+                        <li class="text-md"><b>DERECHO DE PAGO POR TRÁMITE</b> el costo es de <b>S/. 5.00 nuevos soles.</b></li>
+                    </ul>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Prescripción Tributaria</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md"><b>SOLICITUD</b> señalando el periodo y el ejercicio de la deuda tributaria que solicita la prescripción.</li>
+                        <li class="text-md"><b>COPIA DEL DOCUMENTO DE IDENTIDAD</b> del propietario o de su representante.</li>
+                        <li class="text-md"><b>EN EL CASO DE REPRESENTACIÓN</b> presentar poder especifico en documento público o privado con firma legalizada ante el notario o fedateada.</li>
+                    </ul>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Constancia de Contribuyente</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md"><b>SOLICITUD</b> dirigida al alcalde.</li>
+                        <li class="text-md"><b>COPIA DEL DOCUMENTO DE IDENTIDAD</b> del propietario.</li>
+                        <li class="text-md">Pago por derecho del presente trámite <b>S/. 25.92 nuevos soles.</b></li>
+                    </ul>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">De Conformidad a la Ordenanza Municipal N.° 014-2007-MDCA</h3>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Prescripción Tributaria</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md"><b>SOLICITUD</b> señalando el periodo y el ejercicio de la deuda tributaria que solicita la prescripción.</li>
+                        <li class="text-md"><b>COPIA DEL DOCUMENTO DE IDENTIDAD</b> del propietario o de su representante.</li>
+                        <li class="text-md"><b>EN EL CASO DE REPRESENTACIÓN</b> presentar poder especifico en documento público o privado con firma legalizada ante el notario o fedateada.</li>
+                    </ul>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Constancia de Contribuyente</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md"><b>SOLICITUD</b> dirigida al alcalde.</li>
+                        <li class="text-md"><b>COPIA DEL DOCUMENTO DE IDENTIDAD</b> del propietario.</li>
+                        <li class="text-md">Pago por derecho del presente trámite <b>S/. 25.92 nuevos soles.</b></li>
+                    </ul>
+                </div>
+                <div class="rents-item">
+                    <h3 class="text-lg text-left my-4 font-semibold">Asimismo, de adjunta lo que a continuación se detalla:</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-md">Modelos de formatos de HR, PU y PR, de forma digital.</li>
+                        <li class="text-md">Cuadro de valores unitarios oficial para la costa actualizado.</li>
+                        <li class="text-md">Tabla de depreciación por antigüedad y estados de conservación según el material actualizado.</li>
+                    </ul>
+                </div>
+            </article>
+        </article>
+    </section>
+</Layout>

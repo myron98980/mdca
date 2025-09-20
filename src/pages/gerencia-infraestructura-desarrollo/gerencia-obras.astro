@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/BlogPost.astro";
+import Cards from "../../components/cards/gerency-cards";
+
+const worksCardsArray = [
+    {
+        image: "https://www.municerroazul.gob.pe/muni-resources/img/works/public-works.png",
+        title: "Sub Gerencia de Obras Públicas, Estudios, Proyectos y Liquidaciones",
+        link: "#",
+    },
+    {
+        image: "https://www.municerroazul.gob.pe/muni-resources/img/works/private-works.png",
+        title: "Sub Gerencia de Obras Privadas, Catastro y Habilitaciones Urbanas",
+        link: "/gerencia-infraestructura-desarrollo/obras-privadas",
+    },
+    {
+        image: "https://www.municerroazul.gob.pe/muni-resources/img/works/risk-management.png",
+        title: "Sub Gerencia de Gestión de Riesgo de Desastres y Defensa Civil",
+        link: "#",
+    },
+    {
+        image: "https://www.municerroazul.gob.pe/muni-resources/img/works/technical-municipality.png",
+        title: "Área Técnica Municipal (ATM)",
+        link: "#",
+    },
+    {
+        image: "https://www.municerroazul.gob.pe/muni-resources/img/works/maintenance.png",
+        title: "Sub Gerencia de Mantenimiento de Infraestructura",
+        link: "#",
+    }
+]
+---
+
+<Layout title="Gerencia de Infraestructura, Desarrollo Urbano y Rural">
+    <section class="works flex flex-col items-center justify-center gap-2 my-[8rem] px-[1.2rem] md:w-[900px] xl:w-[1200px] mx-auto">
+        <article class="works-title mb-[3rem]">
+            <h3 class="[font-family:var(--font-family-modern)] mb-[3rem] text-3xl md:text-4xl lg:text-5xl text-center font-semibold">Gerencia de Infraestructura, Desarrollo Urbano y Rural</h3>
+            <p>Esta gerencia es la encargada de planificar, ejecutar y supervisar obras y proyectos que mejoren la infraestructura urbana y rural del municipio. Su labor incluye el desarrollo sostenible, el ordenamiento territorial, la modernización de espacios públicos y el impulso de iniciativas que promuevan el bienestar de la comunidad, garantizando un crecimiento equilibrado y respetuoso con el medio ambiente.</p>
+        </article>
+        <article class="works-cards flex flex-col items-center justify-center gap-8 md:grid md:grid-cols-2 md:place-items-center">
+            {
+				worksCardsArray.map((worksCardsArray) => (
+					<Cards
+						link={worksCardsArray.link}
+						image={worksCardsArray.image}
+						title={worksCardsArray.title}
+					/>
+				))
+			}
+        </article>
+    </section>
+</Layout>

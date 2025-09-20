@@ -1,0 +1,105 @@
+---
+// Array de datos para los enlaces de navegación, basado en tu código.
+const navLinks = [
+  { href: "/municipalidad/informacion-municipal", text: "Inicio" },
+  { href: "/municipalidad/gobierno", text: "Gobierno" },
+  { href: "/municipalidad/funcionarios-municipales", text: "Funcionarios" },
+  { href: "https://www.municerroazul.gob.pe:2096/", text: "Intranet", target: "_blank" }, // Añadimos target para abrir en nueva pestaña
+  { href: "/municipalidad/notas-de-prensa", text: "Notas de Prensa" },
+  { href: "#", text: "Contact Center", isButton: true },
+];
+
+// Datos para la barra superior (puedes personalizarlos)
+const socialLinks = [
+  { href: "https://www.facebook.com/MunicipalidadDeCerroAzul/", label: "Facebook", icon: "fab fa-facebook-f" },
+  { href: "https://www.instagram.com/muni_cerroazul/", label: "Instagram", icon: "fab fa-instagram" },
+   { href: "https://www.whatsapp.com/channel/0029VbBDf9J3AzNZ5ngqs831", label: "WhatsApp", icon: "fab fa-whatsapp" },
+  
+];
+---
+<!-- CDN de FontAwesome para los iconos. Asegúrate que esté en tu layout principal si no lo pones aquí. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+<header class="w-full shadow-md sticky top-0 z-50 bg-white">
+  <!-- Barra Superior (Pre-Header) -->
+  <div class="bg-[#00446b] text-white px-4 md:px-8 py-2 hidden md:block">
+    <div class="container mx-auto flex justify-between items-center text-sm">
+      <div class="flex items-center gap-x-6">
+       
+		    <div class="flex items-center gap-2">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>JR. ALFONSO UGARTE S/N (PLAZA DE ARMAS) </span>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <!-- 
+            CAMBIO CLAVE:
+            1. Se añadió `p-2`, `rounded-full` y `hover:bg-white/20` para crear un botón circular más grande.
+            2. Se añadió `text-lg` para hacer el icono más grande.
+        -->
+        {socialLinks.map(link => (
+          <a href={link.href} aria-label={link.label} class="p-2 rounded-full hover:bg-white/20 transition-colors text-lg">
+            <i class={link.icon}></i>
+          </a>
+        ))}
+   <a href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=10601" class="ml-4 hover:opacity-80 transition-opacity">
+          <img 
+            src="https://www.municerroazul.gob.pe/muni-resources/img/iconos/PORTAL_TRANSPARENCIA.png" 
+            alt="Portal de Transparencia" 
+            class="h-10"
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra Principal con tu Navegación -->
+  <nav class="container mx-auto px-4 md:px-8 py-4 flex flex-wrap justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-4 order-1">
+      <img src="https://www.municerroazul.gob.pe/muni-resources/img/presentation/logo-muni-dark.png" alt="Logo Municipalidad de Cerro Azul" class="h-16">
+     
+    </a>
+
+    <!-- Botón de Menú Móvil -->
+    <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 order-2">
+      <span class="sr-only">Abrir menú principal</span>
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+
+    <!-- Contenedor de Enlaces (Tu código integrado) -->
+    <div id="navbar-sticky" class="w-full hidden xl:flex flex-col bg-white xl:w-auto xl:order-1 order-3 xl:ml-auto">
+      <ul class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 xl:p-0 xl:mt-0 xl:border-0 xl:bg-transparent text-lg xl:flex-row xl:gap-8 items-center">
+        {navLinks.map(link => {
+          // Clases base para todos los enlaces
+          let classes = "block py-2 px-3 text-gray-600 rounded md:p-0 hover:bg-gray-100 xl:hover:bg-transparent xl:hover:text-[#015da8]";
+          
+          // Si el enlace es el botón "Contact Center", aplicamos estilos especiales
+          if (link.isButton) {
+            classes = "mt-4 xl:mt-0 text-white bg-[#015da8] hover:bg-[#00446b] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center xl:w-auto";
+          }
+          
+          return (
+            <li>
+              <a href={link.href} class={classes} target={link.target || '_self'}>{link.text}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Script para manejar el menú móvil
+  const toggleButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+  const navbar = document.getElementById('navbar-sticky');
+
+  if (toggleButton && navbar) {
+    toggleButton.addEventListener('click', () => {
+      navbar.classList.toggle('hidden');
+    });
+  }
+</script>

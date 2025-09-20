@@ -1,0 +1,3 @@
+public/pdf/link-interest/links/INFORME-DE-RENDICION-DE-CUENTAS-DE-TITULARES-2024.pdf filter=lfs diff=lfs merge=lfs -text
+public/pdf/link-interest/links/* filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
